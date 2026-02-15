@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loan Application Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h2>INSERT CUSTOMER INFORMATION</h2>
+
+    <form id="loanForm">
+
+      <!-- Gender -->
+      <div class="form-row">
+        <label class="label-black">Gender</label>
+        <label><input type="radio" name="gender" value="Male" /> Male</label>
+        <label><input type="radio" name="gender" value="Female" /> Female</label>
+      </div>
+
+      <!-- Married -->
+      <div class="form-row">
+        <label class="label-black">Married</label>
+        <label><input type="radio" name="married" value="Yes" /> Yes</label>
+        <label><input type="radio" name="married" value="No" /> No</label>
+      </div>
+
+      <!-- Dependents -->
+      <div class="form-row">
+        <label class="label-black" for="dependents">Dependents</label>
+        <input type="number" id="dependents" name="dependents" min="0" value="0" />
+      </div>
+
+      <!-- Education -->
+      <div class="form-row">
+        <label class="label-black">Education</label>
+        <label><input type="radio" name="education" value="Graduate" /> Graduate</label>
+        <label><input type="radio" name="education" value="Undergraduate" /> Undergraduate</label>
+      </div>
+
+      <!-- Self Employed -->
+      <div class="form-row">
+        <label class="label-black">Self Employed</label>
+        <label><input type="radio" name="selfEmployed" value="Yes" /> Yes</label>
+        <label><input type="radio" name="selfEmployed" value="No" /> No</label>
+      </div>
+
+      <!-- Applicant Income -->
+      <div class="form-row">
+        <label class="label-black" for="applicantIncome">Applicant Income</label>
+        <input type="number" id="applicantIncome" name="applicantIncome" min="0" value="0" />
+      </div>
+
+      <!-- Coapplicant Income -->
+      <div class="form-row">
+        <label class="label-black" for="coapplicantIncome">Coapplicant Income</label>
+        <input type="number" id="coapplicantIncome" name="coapplicantIncome" min="0" value="0" />
+      </div>
+
+      <!-- Loan Amount -->
+      <div class="form-row">
+        <label class="label-black" for="loanAmount">Loan Amount</label>
+        <input type="number" id="loanAmount" name="loanAmount" min="0" value="0" />
+      </div>
+
+      <!-- Loan Amount Term -->
+      <div class="form-row">
+        <label class="label-black" for="loanTerm">Loan Amount Term</label>
+        <input type="number" id="loanTerm" name="loanTerm" min="0" value="0" />
+      </div>
+
+      <!-- Credit History Meets -->
+      <div class="form-row">
+        <label class="label-black">Credit History Meets</label>
+        <label><input type="radio" name="creditHistory" value="Yes" /> Yes</label>
+        <label><input type="radio" name="creditHistory" value="No" /> No</label>
+      </div>
+
+      <!-- Property Area -->
+      <div class="form-row">
+        <label class="label-black">Property Area</label>
+        <label><input type="radio" name="propertyArea" value="Urban" /> Urban</label>
+        <label><input type="radio" name="propertyArea" value="Semiurban" /> Semiurban</label>
+        <label><input type="radio" name="propertyArea" value="Rural" /> Rural</label>
+      </div>
+
+      <!-- Buttons -->
+      <div class="form-buttons">
+        <button type="button" id="checkLoanBtn" class="btn-green">Check For Loanability</button>
+        <button type="button" id="eligibilityBtn" class="btn-green">Elligability</button>
+        <button type="reset" class="btn-red">Clear</button>
+      </div>
+
+    </form>
+
+    <!-- Email Footer -->
+    <footer>
+      Python:tkniter@example.com
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

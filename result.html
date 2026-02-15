@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loan Eligibility Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .result-container {
+            background: #ffffff;
+            padding: 30px 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+        }
+        .result-container h1 {
+            color: #2e7d32; /* green */
+            margin-bottom: 20px;
+        }
+        .result-container .not-eligible {
+            color: #c62828; /* red */
+        }
+        .result-container p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .result-container button {
+            background-color: #00796b;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .result-container button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <!-- This message will change based on eligibility -->
+        <h1 id="result-message">Congratulations! You are Eligible.</h1>
+        <p id="result-details">Your loan application meets all the criteria.</p>
+        <button onclick="goBack()">Back to Form</button>
+    </div>
+
+    <script>
+        // JavaScript to read eligibility from URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const eligible = urlParams.get('eligible'); // expected 'true' or 'false'
+
+        const messageEl = document.getElementById('result-message');
+        const detailsEl = document.getElementById('result-details');
+
+        if (eligible === 'true') {
+            messageEl.textContent = "Congratulations! You are Eligible.";
+            messageEl.style.color = "#2e7d32"; // green
+            detailsEl.textContent = "Your loan application meets all the criteria.";
+        } else {
+            messageEl.textContent = "Sorry! You are Not Eligible.";
+            messageEl.classList.add('not-eligible');
+            detailsEl.textContent = "Unfortunately, your loan application does not meet the criteria.";
+        }
+
+        // Button to go back to the form
+        function goBack() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
