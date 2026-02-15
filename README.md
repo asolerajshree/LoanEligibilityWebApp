@@ -1,6 +1,6 @@
 
 
-## Overview
+## Project Overview
 This project implements a web-based **loan eligibility assessment system** using **HTML, CSS, and JavaScript**.  
 The application allows users to input financial information (like income, existing loans, and desired loan amount) and quickly check their loan eligibility.  
 
@@ -13,8 +13,11 @@ The system features:
 This project demonstrates how front-end web technologies can be used to implement a **practical financial tool** inspired by academic research.
 
 ---
+**Project Domain:** 
+Financial Technology / Personal Finance
 
-## Research Paper Reference
+## Research Paper Reference  
+
 This project is based on insights from the following research paper:
 
 **Title:** [Predicting Loan Eligibility Using Machine Learning Techniques](https://www.sciencedirect.com/science/article/pii/S2666307423000293)
